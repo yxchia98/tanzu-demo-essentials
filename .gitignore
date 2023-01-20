@@ -1,3 +1,5 @@
 .vscode/settings.json
 .DS_Store
 tkg/tkg01-viktorious.yaml
+cert-manager/route53-clusterissuer-viktorious.yaml
+tkg/tkg03-viktorious.yaml
