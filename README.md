@@ -1,7 +1,7 @@
 # Tanzu Demo Essentials
 Some basic files to get started with vSphere /w Tanzu (TKGs) and/or Tanzu Kubernetes Grid multi-cloud (TKGm).
 
-## Folder Structure
+## File/folder Structure
 * cert-manager - Cert-manager files.
 * harbor - Harbor files.
 * nginx-example - Basic nginx webserver + service.
