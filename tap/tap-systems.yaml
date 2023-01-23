@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
-  name: Spring Boot
-  description: Demo app
+  name: Java Web App
+  description: Demo application
 spec:
   owner: dutch-team
   domain: dutch-domain
