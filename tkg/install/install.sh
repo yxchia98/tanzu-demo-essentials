@@ -1,4 +1,6 @@
 #
+# TKG prerequisites installation script that works for Ubuntu 22.04.2
+#
 # Install & configure Docker
 #
 snap install docker
