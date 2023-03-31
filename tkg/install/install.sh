@@ -71,18 +71,24 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 brew install kubectl kubectx kube-ps1 yq git
 
+alias k=kubectl
+echo "alias k=kubectl" >>  ~/.bashrc
+
 #
 # Autocompletion stuff and setting the prompt
 #
 
-source <(kubectl completion bash)
-echo "source <(kubectl completion bash)" >> ~/.bashrc
+source <(/home/linuxbrew/.linuxbrew/bin/kubectl completion bash)
+echo "source <(/home/linuxbrew/.linuxbrew/bin/kubectl completion bash)" >> ~/.bashrc
+
+complete -F __start_kubectl k
+echo "complete -F __start_kubectl k" >> ~/.bashrc
 
 source "/home/linuxbrew/.linuxbrew/opt/kube-ps1/share/kube-ps1.sh"
 echo "source \"/home/linuxbrew/.linuxbrew/opt/kube-ps1/share/kube-ps1.sh\"" >> ~/.bashrc
 
-PS1='$(kube_ps1)'$PS1
-echo "PS1='\$(kube_ps1)'\$PS1"
+PS1='$(kube_ps1) '$PS1
+echo "PS1='\$(kube_ps1) '\$PS1"
 
 #Install Carvel tools
 
