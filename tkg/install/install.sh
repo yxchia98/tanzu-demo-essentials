@@ -18,10 +18,11 @@ read -p "Do you want to install Docker? Choose n if you've already installed Doc
 # Check user's response, install & configure docker and reboot or continue with script
 if [[ $choice =~ ^[Yy]$ ]]; then
     echo "Installing docker..."
-    snap install docker
+    sudo snap install docker
     sudo groupadd docker
     sudo usermod -aG docker $USER
     sudo reboot
+    echo "Now rebooting, wait 2 minutes then reconnect"
 else
     echo "Continuing with remaining steps of the script..."
     # Add remaining steps of the script here
